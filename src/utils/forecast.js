@@ -15,8 +15,9 @@ const forecast = (lat, lon, callback) => {
             const desc = response.current.weather_descriptions[0]
             const temp = response.current.temperature
             const feelsLike = response.current.feelslike
+            const humidity = response.current.humidity
 
-            callback(undefined, {desc, temp, feelsLike})
+            callback(undefined, {desc, temp, feelsLike, humidity})
         }
     })
 }
